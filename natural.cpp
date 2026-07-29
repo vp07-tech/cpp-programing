@@ -2,9 +2,15 @@
 using namespace std;
 
 int main(){
-
-for(int i=1; i<10; i++){
-cout<<i<<endl;
-}
-return 0;
-}
+int n;
+cout<<"Enter the value of n: ";
+cin>>n;
+cout<<endl;
+int sum=0;
+for(int i; i<=n; i++){
+   sum=sum+i;
+   }
+   cout<<"sum of" <<n<<" numbers is:"<<sum;
+   
+   return 0;
+   }
