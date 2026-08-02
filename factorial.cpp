@@ -1,19 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-int n;
-cout<<"the value of n is:";
-cin>>n;
-cout<<endl;
+int fact(int n)
+{
+    if (n < 0)
+    {
+        cout << "this is invalid ";
+        return 0;
+    }
 
-int factorial=1;
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
 
-for(int i=1; i<=n; i++){
-
-factorial=factorial*i;
+    return n * fact(n - 1);
 }
 
-cout<<"factorial of"<<n<<"is :"<<factorial;
-return 0;
+int main()
+{
+
+    int num;
+    cout << "the value of n is" << endl;
+    cin >> num;
+    cout << "factorial of " << num << " is: " << fact(num);
+    return 0;
 }
